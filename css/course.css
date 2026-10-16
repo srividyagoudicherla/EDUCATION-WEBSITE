@@ -1,0 +1,51 @@
+
+.content-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;  
+}
+
+h1 {
+    text-align: center;
+}
+
+.paragrah{
+    text-align: center;
+    
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+}
+
+.card {
+    
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgb(251, 246, 246);
+    
+}
+
+.card:hover {
+    transform: translateY(15px);
+    border-color: #131313;
+    box-shadow: 10px 12px 20px rgba(17, 17, 17, 0.12);
+}
+
+.card h3 {
+    color: #111111;
+}
+
+.card p {
+    color: #666666;
+}
+
+footer {
+    background-color: #111111;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+}

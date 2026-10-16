@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; 
+}
+
+.navbar .nav-links {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    max-width: 80%;  
+}
+
+.navbar .nav-links a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+img {
+    height: 40px;
+}
+
+.navbar a:hover {
+    color: pink;
+}
+
+
+.middle {
+    margin: 0;
+    padding: 100px;
+    flex-grow: 1;
+}
+
+h1 {
+    color: #111111;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.paragrah {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+/* Active column layout match */
+@media (min-width: 769px) {
+    .column-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 12px 20px rgba(17, 17, 17, 0.12);
+    border-color: #007bff;
+}
+
+.card h3 {
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666666;
+}
+
+
+footer {
+    background-color: #111111;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        padding: 15px 20px; 
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px 20px;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: #111111;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}

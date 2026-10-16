@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUCATION WEBSITE</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="nav-brand">
+                <img src="../assets/image.png" alt="Logo Website">
+            </div>
+
+            <button class="burger" onclick="phoneacess()">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="#home">home</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./timing.html">timing</a></li>
+                <li><a href="./course.html">course</a></li>
+
+                <li class="nav-search">
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="ask anything.?"
+                    >
+                    <button type="button" onclick="searchWebsite()">search</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="middle" id="home">
+        <h1>Empower Your Professional Future</h1>
+
+        <p class="paragrah">
+            Our platform bridges the gap between academic theory and real-world
+            tech careers. We focus on practical, high-impact instruction
+            designed to help you succeed in modern industry environments.
+        </p>
+
+        <div class="grid column-3">
+
+            <div class="card">
+                <h3>Industry Aligned</h3>
+                <p>
+                    Every curriculum module is explicitly built around active
+                    market demands, dropping outdated textbook theories for
+                    current engineering workflows.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ultimate Flexibility</h3>
+                <p>
+                    We respect your busy timeline. With dedicated morning,
+                    afternoon, and evening live shifts, you can balance regular
+                    jobs or university routines smoothly.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Career Accelerated</h3>
+                <p>
+                    From initial design systems up to full-scale cloud
+                    architectures, we train you in production-grade frameworks
+                    that make your portfolio stand out to recruiters.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Logo Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function phoneacess() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+
+        function searchWebsite() {
+            let input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+            if (input === "") {
+                alert("Please enter something to search");
+            }
+            else if (input === "home") {
+                window.location.href = "#home";
+            }
+            else if (input === "about") {
+                window.location.href = "../about/about.html";
+            }
+            else if (input === "timing") {
+                window.location.href = "../timing/timing.html";
+            }
+            else if (input === "course") {
+                window.location.href = "../course/course.html";
+            }
+            else {
+                alert("No matching page found. Try home, about, timing, or course.");
+            }
+        }
+    </script>
+
+</body>
+</html>
