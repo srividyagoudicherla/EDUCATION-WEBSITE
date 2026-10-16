@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDUCATION WEBSITE</title>
     <link rel="stylesheet" href="../css/home.css">
+    
+
 </head>
 <body>
 
@@ -75,39 +77,7 @@
 
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Logo Website. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function phoneacess() {
-            document.querySelector(".nav-links").classList.toggle("active");
-        }
-
-        function searchWebsite() {
-            let input = document.getElementById("searchInput").value.toLowerCase().trim();
-
-            if (input === "") {
-                alert("Please enter something to search");
-            }
-            else if (input === "home") {
-                window.location.href = "#home";
-            }
-            else if (input === "about") {
-                window.location.href = "../about/about.html";
-            }
-            else if (input === "timing") {
-                window.location.href = "../timing/timing.html";
-            }
-            else if (input === "course") {
-                window.location.href = "../course/course.html";
-            }
-            else {
-                alert("No matching page found. Try home, about, timing, or course.");
-            }
-        }
-    </script>
+    <script src="../js/main.js"></script>
 
 </body>
 </html>
